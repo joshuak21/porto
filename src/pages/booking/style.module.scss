@@ -1,0 +1,20 @@
+.BookingPage {
+	font-family: Montserrat, sans-serif !important;
+	min-height: 100vh;
+}
+
+.contentContainer {
+	margin: 2em 0;
+	min-height: 90vh;
+}
+
+.fontWeightList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: .5em;
+	p {
+		border: 1px solid rgba(0, 0, 0, .3);
+		font-size: 48px;
+	}
+}
