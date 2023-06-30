@@ -1,6 +1,7 @@
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-Thin.ttf);
+	/* src: url(/font/Montserrat/Montserrat-Thin.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-Thin.ttf');
 	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
@@ -8,7 +9,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-ExtraLight.ttf);
+	/* src: url(/font/Montserrat/Montserrat-ExtraLight.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-ExtraLight.ttf');
 	font-weight: 200;
 	font-style: normal;
 	font-display: swap;
@@ -16,7 +18,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-Light.ttf);
+	/* src: url(/font/Montserrat/Montserrat-Light.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-Light.ttf');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -24,7 +27,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-Regular.ttf);
+	/* src: url(/font/Montserrat/Montserrat-Regular.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-Regular.ttf');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -32,7 +36,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-Medium.ttf);
+	/* src: url(/font/Montserrat/Montserrat-Medium.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-Medium.ttf');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -40,7 +45,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-SemiBold.ttf);
+	/* src: url(/font/Montserrat/Montserrat-SemiBold.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-SemiBold.ttf');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -48,7 +54,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-Bold.ttf);
+	/* src: url(/font/Montserrat/Montserrat-Bold.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-Bold.ttf');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -56,7 +63,8 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(/font/Montserrat/Montserrat-ExtraBold.ttf);
+	/* src: url(/font/Montserrat/Montserrat-ExtraBold.ttf); */
+	src: url('../../public/font/Montserrat/Montserrat-ExtraBold.ttf');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
