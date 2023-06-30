@@ -2,6 +2,7 @@ const path = require('path')
 
 const repo = 'porto'
 const basePath = `/${repo}`
+const assetPrefix = `/${repo}`
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,6 +18,7 @@ const nextConfig = {
 		'page.tsx',
 	],
 	basePath: basePath,
+	assetPrefix: assetPrefix,
 }
 
 module.exports = nextConfig
