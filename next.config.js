@@ -1,12 +1,14 @@
 const path = require('path')
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false
+// const isGithubActions = process.env.GITHUB_ACTIONS || false
+const isGithubActions = true
 
 let assetPrefix = ''
 let basePath = ''
 
 if (isGithubActions) {
-	const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+	// const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+	const repo = 'porto'
 
 	assetPrefix = `/${repo}/`
 	basePath = `/${repo}`
