@@ -17,6 +17,7 @@ const nextConfig = {
 	assetPrefix: '/porto/',
 	basePath: basePath,
 	images: {
+		domains: 'https://porto-8140.imgix.net',
 		loader: 'imgix',
 		path: 'https://porto-8140.imgix.net'
 	},
