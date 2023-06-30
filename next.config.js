@@ -14,13 +14,13 @@ if (isGithubActions) {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	assetPrefix: '/porto/',
+	assetPrefix: assetPrefix,
 	basePath: basePath,
 	images: {
 		loader: 'imgix',
 		path: 'https://porto-8140.imgix.net'
 	},
-	output: 'export',
+	// output: 'export',
 	reactStrictMode: true,
 	experimental: {
 		scrollRestoration: true,
