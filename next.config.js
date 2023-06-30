@@ -28,6 +28,10 @@ const nextConfig = {
 	],
 	assetPrefix: assetPrefix,
 	basePath: basePath,
+	images: {
+		loader: 'imgix',
+		path: 'https://porto-8140.imgix.net'
+	}
 }
 
 module.exports = nextConfig
