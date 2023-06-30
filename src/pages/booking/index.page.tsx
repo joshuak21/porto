@@ -15,7 +15,7 @@ export default function BookingPage(): JSX.Element {
 	const header: HeaderComponentPropsInterface['headerList'] = [{
 		title: 'Home',
 		children: [{
-			title: 'Story'
+			title: 'Story',
 			href: './'
 		}, {
 			title: 'Partners'
