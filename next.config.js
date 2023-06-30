@@ -19,9 +19,18 @@ const nextConfig = {
 	// images: {loader: 'imgix',path: 'https://porto-8140.imgix.net'},
 	output: 'export',
 	reactStrictMode: true,
-	experimental: {scrollRestoration: true},
-	sassOptions: {includePaths: [path.join(__dirname, 'styles')]},
-	pageExtensions: ['page.tsx'],
+	experimental: {
+		scrollRestoration: true
+	},
+	sassOptions: {
+		includePaths: [
+			path.join(__dirname, 'styles')
+		]
+	},
+	pageExtensions: [
+		'page.tsx'
+	],
+	swcMinify: true,
 }
 
 module.exports = nextConfig

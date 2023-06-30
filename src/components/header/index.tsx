@@ -24,7 +24,7 @@ export interface PropsInterface {
 }
 
 function _HeaderComponent({
-	logo = '/vercel.svg',
+	logo = 'vercel.svg',
 	alt = 'Header Logo',
 	...props
 }: PropsInterface): JSX.Element {
