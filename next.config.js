@@ -3,17 +3,23 @@ const path = require('path')
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
-let basePath = '/'
+let basePath = ''
 
 if (isGithubActions) {
 	const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
 
 	assetPrefix = `/${repo}/`
-	basePath = `/${repo}`
+	basePath = `${repo}`
   }
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	assetPrefix: assetPrefix,
+	basePath: basePath,
+	images: {
+		loader: 'imgix',
+		path: 'https://porto-8140.imgix.net'
+	},
 	output: 'export',
 	reactStrictMode: true,
 	experimental: {
@@ -25,12 +31,6 @@ const nextConfig = {
 	pageExtensions: [
 		'page.tsx',
 	],
-	assetPrefix: assetPrefix,
-	basePath: basePath,
-	images: {
-		loader: 'imgix',
-		path: 'https://porto-8140.imgix.net'
-	}
 }
 
 module.exports = nextConfig
