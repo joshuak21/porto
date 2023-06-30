@@ -19,7 +19,7 @@ export interface PropsInterface {
 }
 
 function _FooterComponent({
-	logo = '/vercel.svg',
+	logo = 'vercel.svg',
 	alt = 'Footer Logo',
 	...props
 }: PropsInterface): JSX.Element {
