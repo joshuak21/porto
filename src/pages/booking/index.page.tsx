@@ -5,7 +5,6 @@ import FooterComponent, {
 } from '@/components/footer'
 import HeaderComponent, {
 	PropsInterface as HeaderComponentPropsInterface,
-	ChildrenType,
 } from '@/components/header'
 import HeadingComponent from '@/components/heading'
 
@@ -24,7 +23,7 @@ export default function BookingPage(): JSX.Element {
 		title: 'Pages',
 		children: [{
 			title: 'Booking',
-			href: 'booking'
+			href: '/booking'
 		}, {
 			title: 'Product List',
 			// href: '/product-list'
