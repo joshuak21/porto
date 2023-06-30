@@ -14,7 +14,7 @@ if (isGithubActions) {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	assetPrefix: assetPrefix,
+	assetPrefix: '/porto/',
 	basePath: basePath,
 	images: {
 		loader: 'imgix',
