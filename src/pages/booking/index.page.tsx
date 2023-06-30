@@ -24,7 +24,7 @@ export default function BookingPage(): JSX.Element {
 		title: 'Pages',
 		children: [{
 			title: 'Booking',
-			href: '/booking'
+			href: 'booking'
 		}, {
 			title: 'Product List',
 			// href: '/product-list'
