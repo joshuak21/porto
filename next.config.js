@@ -20,7 +20,7 @@ const nextConfig = {
 		loader: 'imgix',
 		path: 'https://porto-8140.imgix.net'
 	},
-	output: 'export',
+	// output: 'export',
 	reactStrictMode: true,
 	experimental: {
 		scrollRestoration: true,
