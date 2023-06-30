@@ -26,8 +26,8 @@ const nextConfig = {
 	pageExtensions: [
 		'page.tsx',
 	],
-	basePath: basePath,
 	assetPrefix: assetPrefix,
+	basePath: basePath,
 }
 
 module.exports = nextConfig
