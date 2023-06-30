@@ -6,7 +6,7 @@ on:
   push:
     branches: ["main"]
 
-permission:
+permissions:
   contents: read
   pages: write
   id-token: write
