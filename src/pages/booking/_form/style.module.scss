@@ -1,0 +1,49 @@
+.FormPart {
+	background: rgb(var(--header-background));
+	padding: 2em 0;
+	margin: 1em 0;
+}
+
+.contentContainer {
+	padding: 1em;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	background: rgb(138, 199, 219);
+	border-radius: 4px;
+}
+
+.tripContainer {
+	display: flex;
+	flex-direction: row;
+	gap: .5em;
+}
+
+.tripContentContainer {
+	border-radius: 8px;
+	padding: 4px;
+	cursor: pointer;
+}
+
+.tripContentContainer:hover {
+	background: rgb(95, 161, 182);
+}
+
+.dateContainer {
+	grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.datePickerContainer {
+	input {
+		font-family: 'Poppins', sans-serif;
+		background: rgb(95, 161, 182);
+		padding: 6px;
+		border-radius: 8px;
+	}
+}
+
+.guestContainer {
+	grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}

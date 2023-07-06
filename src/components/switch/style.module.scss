@@ -1,0 +1,69 @@
+.SwitchComponent {
+	background: rgb(204, 204, 204);
+	position: relative;
+	border-radius: 34px;
+	cursor: pointer;
+}
+
+.active {
+	background: #2196F3;
+}
+
+.disabled {
+	cursor: default !important;
+	background: rgba(204, 204, 204, .5);
+	.toggle {
+		background: rgba(255, 255, 255, .3);
+	}
+}
+
+.container-SMALL {
+	width: 48px;
+	height: 28px;
+}
+
+.container-MEDIUM {
+	width: 56px;
+	height: 32px;
+}
+
+.container-LARGE{
+	width: 64px;
+	height: 36px;
+}
+
+.toggle {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	background: #ffffff;
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+}
+
+.toggle-SMALL {
+	width: 20px;
+	height: 20px;
+}
+
+.toggleActive-SMALL {
+	left: 24px;
+}
+
+.toggle-MEDIUM {
+	width: 24px;
+	height: 24px;
+}
+
+.toggleActive-MEDIUM {
+	left: 28px;
+}
+
+.toggle-LARGE {
+	width: 28px;
+	height: 28px;
+}
+
+.toggleActive-LARGE {
+	left: 32px;
+}

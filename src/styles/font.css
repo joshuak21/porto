@@ -1,3 +1,4 @@
+/* MONTSERRAT */
 @font-face {
 	font-family: Montserrat;
 	/* src: url(/font/Montserrat/Montserrat-Thin.ttf); */
@@ -69,3 +70,78 @@
 	font-style: normal;
 	font-display: swap;
 }
+/* ============================================================================== */
+
+/* POPPINS */
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-Thin.ttf); */
+	src: url('../../public/font/Poppins/Poppins-Light.ttf');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-ExtraLight.ttf); */
+	src: url('../../public/font/Poppins/Poppins-ExtraLight.ttf');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-Light.ttf); */
+	src: url('../../public/font/Poppins/Poppins-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-Regular.ttf); */
+	src: url('../../public/font/Poppins/Poppins-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-Medium.ttf); */
+	src: url('../../public/font/Poppins/Poppins-Medium.ttf');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-SemiBold.ttf); */
+	src: url('../../public/font/Poppins/Poppins-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-Bold.ttf); */
+	src: url('../../public/font/Poppins/Poppins-Bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Poppins;
+	/* src: url(/font/Montserrat/Montserrat-ExtraBold.ttf); */
+	src: url('../../public/font/Poppins/Poppins-ExtraBold.ttf');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+/* ============================================================================== */

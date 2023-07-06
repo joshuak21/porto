@@ -3,6 +3,7 @@ import {
 	useEffect,
 } from 'react'
 
+import NextLink from 'next/link'
 import NextImage from 'next/image'
 
 import Styles from './style.module.scss'
@@ -17,6 +18,7 @@ export interface PropsInterface {
 	alt?: string,
 	headerList: {
 		title: string,
+		href?: string,
 		children?: ChildrenType[]
 	}[],
 	className?: string,
@@ -73,7 +75,9 @@ function _HeaderComponent({
 	const headerRenderer = (header: typeof props.headerList[0], index: number) => {
 		return (
 			<div key={index} className={`${Styles.headerContainer} headerContainer`} onClick={onToggle}>
-				<p>{header.title}</p>
+				<NextLink href={header.href ?? ''} scroll={false}>
+					<p>{header.title}</p>
+				</NextLink>
 				{!!header.children && (
 					<div className={`${Styles.headerChildrenContainer} headerChildrenContainer`}>
 						{header.children.map(headerChildrenRenderer)}

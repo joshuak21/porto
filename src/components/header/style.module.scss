@@ -1,5 +1,6 @@
 .headerNavContainer {
-	background-color: rgba(173, 216, 230, .5);
+	// background-color: rgba(173, 216, 230, .5);
+	background: rgba(var(--header-background), .5);
 	position: sticky;
 	top: 0;
 	backdrop-filter: saturate(180%) blur(5px);
@@ -41,7 +42,8 @@
 }
 
 .headerContainer:hover {
-	background-color: rgba(22, 159, 204, .5);
+	// background-color: rgba(22, 159, 204, .5);
+	background: rgba(var(--header-background), .5);
 	border-radius: 4px;
 	div {
 		opacity: 1;

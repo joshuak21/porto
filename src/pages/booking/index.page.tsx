@@ -8,26 +8,31 @@ import HeaderComponent, {
 } from '@/components/header'
 import HeadingComponent from '@/components/heading'
 
+import FormPart from './_form'
+
 import Styles from './style.module.scss'
 
 export default function BookingPage(): JSX.Element {
 
 	const header: HeaderComponentPropsInterface['headerList'] = [{
-		title: 'Home',
-		children: [{
-			title: 'Story',
-			href: './'
-		}, {
-			title: 'Partners'
-		}]
-	}, {
 		title: 'Pages',
 		children: [{
+			title: 'Landing',
+			href: './'
+		}, {
 			title: 'Booking',
 			href: 'booking'
 		}, {
-			title: 'Product List',
+			title: 'Shop',
 			// href: '/product-list'
+		}]
+	}, {
+		title: 'Home',
+		children: [{
+			title: 'About Us',
+			href: '#aboutus'
+		}, {
+			title: 'Partners'
 		}]
 	}, {
 		title: 'Our Service',
@@ -72,6 +77,8 @@ export default function BookingPage(): JSX.Element {
 					<p className="font-bold">Montserrat Bold</p>
 					<p className="font-extrabold">Montserrat ExtraBold</p>
 				</div>
+
+				<FormPart/>
 			</div>
 			<FooterComponent contents={footerContents} company="Vercel"/>
 		</div>
