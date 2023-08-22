@@ -1,0 +1,44 @@
+.BannerSection {
+	padding: 36px 24px;
+	font-family: Montserrat, sans-serif !important;
+}
+
+.title {
+	font-size: 34px;
+	margin-bottom: 16px;
+}
+
+.bannerImageContainer {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: calc(100% * 9 / 16);
+}
+
+.bannerImageInnerContainer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.bannerImageInnerContainer img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.bannerTitleContainer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding: 16px;
+	background: rgba(0, 0, 0, .5);
+	color: #FFFFFF;
+}
+
+.countdownContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}

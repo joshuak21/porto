@@ -24,7 +24,7 @@ export default function BookingPage(): JSX.Element {
 			href: 'booking'
 		}, {
 			title: 'Shop',
-			// href: '/product-list'
+			href: 'shop'
 		}]
 	}, {
 		title: 'Home',

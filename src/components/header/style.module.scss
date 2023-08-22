@@ -4,6 +4,7 @@
 	position: sticky;
 	top: 0;
 	backdrop-filter: saturate(180%) blur(5px);
+	z-index: 99;
 }
 
 .headerDesktopContainer {
