@@ -40,6 +40,53 @@ h6 {
   font-size: 1.125rem;
 }
 
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+span {
+  vertical-align: initial;
+  border: 0;
+  font: inherit !important;
+}
+
+.image-container-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: calc(100% * 9 / 16);
+}
+
+.trip-types-container {
+  display: flex;
+  flex-direction: row;
+  gap: .75rem;
+}
+
+.trip-types-container .active {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.trip-type-container {
+  /* background: #FFFFFF; */
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.trip-type-container:hover {
+  background: rgba(0, 0, 0, .5);
+  color: #FFFFFF;
+}
+
+.trip-type-container.active:hover {
+  background: rgba(255, 255, 255, .75);
+  color: #000000;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

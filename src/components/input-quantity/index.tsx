@@ -61,10 +61,12 @@ function _InputQuantityComponent({
 		<div className={StringHelper.trim(`${Styles.inputQuantityContainer} ${props.className || ''}`)} style={props.style}>
 			<div onClick={onReduce} className={Styles.button}>
 				<i className="uil uil-minus"></i>
+				{/* <span>-</span> */}
 			</div>
 			<input type="number" min={min} max={props.max} value={quantity} onChange={onChangeInput} className={Styles.inputQuantity}/>
 			<div onClick={onIncrease} className={Styles.button}>
 				<i className="uil uil-plus"></i>
+				{/* <span>+</span> */}
 			</div>
 		</div>
 	)

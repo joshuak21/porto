@@ -66,7 +66,7 @@ export default function BookingPage(): JSX.Element {
 			<HeaderComponent headerList={header}/>
 			<div className={Styles.contentContainer}>
 				<p className="text-[24px]">Booking Page</p>
-				<p>Whereas disregard and contempt for human rights have resulted</p>
+				{/* <p>Whereas disregard and contempt for human rights have resulted</p>
 				<div className={Styles.fontWeightList}>
 					<p className="font-thin">Montserrat Thin</p>
 					<p className="font-extralight">Montserrat ExtraLight</p>
@@ -76,7 +76,7 @@ export default function BookingPage(): JSX.Element {
 					<p className="font-semibold">Montserrat SemiBold</p>
 					<p className="font-bold">Montserrat Bold</p>
 					<p className="font-extrabold">Montserrat ExtraBold</p>
-				</div>
+				</div> */}
 
 				<FormPart/>
 			</div>

@@ -1,7 +1,6 @@
 .FormPart {
 	background: rgb(var(--header-background));
-	padding: 2em 0;
-	margin: 1em 0;
+	margin: 3em 0;
 }
 
 .contentContainer {
@@ -9,8 +8,14 @@
 	width: 100%;
 	max-width: 900px;
 	margin: 0 auto;
-	background: rgb(138, 199, 219);
-	border-radius: 4px;
+	// background: rgba(138, 199, 219, .7);
+	background: rgba(0, 0, 0, .5);
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0,0,0,1);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 }
 
 .tripContainer {
@@ -36,8 +41,10 @@
 
 .datePickerContainer {
 	input {
-		font-family: 'Poppins', sans-serif;
-		background: rgb(95, 161, 182);
+		// font-family: 'Poppins', sans-serif;
+		// background: rgb(95, 161, 182);
+		background: #FFFFFF;
+		color: #000000;
 		padding: 6px;
 		border-radius: 8px;
 	}
