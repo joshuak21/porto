@@ -1,7 +1,9 @@
 .LandingPage {
-	--header-background: 40, 56, 82;
+	--header-background: 255,255,255;
 	font-family: Poppins, sans-serif;
 	min-height: 100vh;
+	background: #F7F9FF;
+	padding-bottom: 3em;
 
 	h1 {
 		display: block;
@@ -14,24 +16,7 @@
 	}
 }
 
-
-.bannerSection {
-	background: url('../../../public/img/landing/unsplash-jefferson-sees.jpg');
-	background-size: cover;
-	min-height: 560px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.bannerSectionContainer {
+.marquee :global(.rfm-initial-child-container) {
 	width: 100%;
-	height: 100%;
-	align-self: center;
-	max-width: 40em;
-	padding: 4em 1em;
-}
-
-.aboutSection {
-	padding: 2em 0;
+	justify-content: space-between;
 }
