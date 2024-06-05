@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import NextImage, { StaticImageData } from 'next/image'
 
+import SwiperCore, { Pagination, FreeMode, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+
+SwiperCore.use([Pagination, FreeMode, Autoplay])
 import 'swiper/css'
 
 import moment from 'moment'
