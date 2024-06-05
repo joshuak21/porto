@@ -3,20 +3,10 @@
 	font-family: Poppins, sans-serif;
 	min-height: 100vh;
 	background: #F7F9FF;
-	padding-bottom: 3em;
-
-	h1 {
-		display: block;
-		font-size: 2em;
-		margin-block-start: 0.67em;
-		margin-block-end: 0.67em;
-		margin-inline-start: 0px;
-		margin-inline-end: 0px;
-		font-weight: bold;
-	}
+	padding-bottom: 6em;
 }
 
-.marquee :global(.rfm-initial-child-container) {
-	width: 100%;
-	justify-content: space-between;
-}
+// .marquee :global(.rfm-initial-child-container) {
+// 	width: 100%;
+// 	justify-content: space-between;
+// }
