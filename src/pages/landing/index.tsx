@@ -1,5 +1,7 @@
 import React, {
 	useEffect,
+	useState,
+	useReducer,
 } from 'react'
 
 import NextImage, { StaticImageData } from 'next/image'
@@ -31,8 +33,15 @@ import GITHUB from 'public/img/landing/clients/github.png'
 import IBM from 'public/img/landing/clients/ibm.png'
 import MICROSOFT from 'public/img/landing/clients/microsoft.png'
 
+class ElementData {
+	public selectedTestimony: { name: string, message: string } = { name: '', message: '' }
+	public showModalTestimony: boolean = false
+}
+
 export default function LandingPage(): JSX.Element {
 
+	const [d] = useState(new ElementData())
+	const [, forceUpdate] = useReducer((x: number) => x + 1, 0)
 	const header: HeaderComponentPropsInterface['headerList'] = [{
 		title: 'Pages',
 		children: [{
@@ -88,6 +97,18 @@ export default function LandingPage(): JSX.Element {
 		{ name: 'James Vowel', message: 'Elit eget gravida cum sociis. Vulputate eu scelerisque felis imperdiet proin fermentum. Venenatis a condimentum vitae sapien pellentesque habitant. Pellentesque id nibh tortor id aliquet. Placerat in egestas erat imperdiet sed euismod nisi.' },
 	]
 
+	function readTestimony(data: {name: string, message: string}): void {
+		d.selectedTestimony = data
+		d.showModalTestimony = true
+		forceUpdate()
+	}
+
+	function closeModalTestimony(): void {
+		d.selectedTestimony = { name: '', message: '' }
+		d.showModalTestimony = false
+		forceUpdate()
+	}
+
 	return (<>
 		<HeadingComponent title="Landing Page"/>
 		<div className={Styles.LandingPage}>
@@ -119,11 +140,11 @@ export default function LandingPage(): JSX.Element {
 					</div>
 				</section>
 
-				<section id="service" className="max-w-[1600px] mx-auto py-4">
-					<div className="flex flex-col items-center px-4 py-8">
+				<section id="service" className="bg-white">
+					<div className="flex flex-col items-center py-8 max-w-[1600px] mx-auto">
 						<h1 className="text-center text-[2em] font-bold mb-4">What We Offers</h1>
-						<div className="flex flex-col sm:flex-row gap-4">
-							<div className="flex flex-col w-full sm:w-1/2 bg-white p-4 rounded-md shadow-[0_0_8px_0_rgba(0,0,0,.03)]">
+						<div className="flex flex-col sm:flex-row gap-8">
+							<div className="flex flex-col w-full sm:w-1/2">
 								<p>Ut pretium ligula at commodo pharetra. Proin porta nibh sit amet nibh suscipit, in pretium elit mollis.</p>
 								<ul className="list-disc pl-7 my-4">
 									<li>Lorem ipsum dolor sit amet</li>
@@ -132,7 +153,7 @@ export default function LandingPage(): JSX.Element {
 								</ul>
 								<p>Condimentum id venenatis a condimentum vitae sapien pellentesque. Mauris sit amet massa vitae tortor. Phasellus egestas tellus rutrum tellus pellentesque eu.</p>
 							</div>
-							<div className="flex flex-col w-full sm:w-1/2 bg-white p-4 rounded-md shadow-[0_0_8px_0_rgba(0,0,0,.03)]">
+							<div className="flex flex-col w-full sm:w-1/2">
 								<p>Sed varius, erat eu fermentum ornare, mi mi pretium felis, sed consectetur arcu eros eget sem. Duis sit amet feugiat ante, sed convallis felis.</p>
 								<div className="flex flex-col gap-1">
 									{dummyServices.map((data: string, index: number) => (
@@ -165,7 +186,7 @@ export default function LandingPage(): JSX.Element {
 				<section id="testimonies" className="py-4 pt-[5em]">
 					<div className="flex flex-col items-center py-8">
 						<h1 className="text-[2em] font-bold mb-4">Testimonies</h1>
-						<Swiper slidesPerView={2.5} centeredSlides className="w-full" spaceBetween={12} loop>
+						<Swiper slidesPerView={2.25} className="w-full !px-4" spaceBetween={12} loop>
 							{testimonies.map((data: typeof testimonies[0], index: number) => (
 								<SwiperSlide key={index}>
 									<div className="bg-white p-4 rounded-md">
@@ -173,11 +194,30 @@ export default function LandingPage(): JSX.Element {
 											<span className="flex"><i className="uil uil-user-square leading-none text-[3em]"/></span>
 											<p className="ml-2 font-medium text-lg">{data.name}</p>
 										</div>
-										<p className="pt-2 whitespace-break-spaces">{data.message}</p>
+										<p className="pt-2 whitespace-break-spaces line-clamp-4">{data.message}</p>
+										<div className="mt-2 flex w-full justify-end">
+											<button type="button" onClick={(): void => readTestimony(data)} className="underline text-sm">Read more</button>
+										</div>
 									</div>
 								</SwiperSlide>
 							))}
 						</Swiper>
+					</div>
+
+					<div className={`${Styles['modal-container']} ${d.showModalTestimony ? Styles['show'] : ''}`}>
+						<div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.25)]"/>
+						<div className="relative max-w-[600px] w-full bg-white rounded-md p-4">
+							<div className="absolute top-[.5em] right-[.5em]">
+								<button type="button" onClick={closeModalTestimony} className="flex overflow-hidden"><i className="uil uil-times leading-none text-[2em]"/></button>
+							</div>
+							<div className="flex flex-row items-start">
+								<span className="flex"><i className="uil uil-user-square leading-none text-[3em]"/></span>
+								<p className="ml-2 font-medium text-lg">{d.selectedTestimony.name}</p>
+							</div>
+							<div className="mt-4">
+								<p className="whitespace-break-spaces">{d.selectedTestimony.message}</p>
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>
