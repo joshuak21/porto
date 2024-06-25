@@ -77,3 +77,23 @@
 	margin-top: 3em;
 	font-size: 12px;
 }
+
+@media only screen and (max-width: 480px) {
+	.footerInnerContainer {
+		flex-direction: column;
+		gap: .5em;
+	}
+	.childrenContainer {
+		display: flex;
+	}
+	.formContainer {
+		height: 48px;
+	}
+	.formContainer input {
+		max-width: 100%;
+		width: 100%;
+	}
+	.formContainer button {
+		right: 10px;
+	}
+}

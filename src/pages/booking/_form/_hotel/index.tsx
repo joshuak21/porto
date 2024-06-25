@@ -30,27 +30,27 @@ export default function HotelTypePart(): JSX.Element {
 		<div className="pt-[12px]">
 			<div className="flex gap-[1rem]">
 				<div className="w-full flex flex-col">
-					<span className="w-full text-[#fff] font-medium">Arrival Date <i className="uil uil-calendar-alt"></i></span>
+					<span className="w-full font-medium">Arrival Date <i className="uil uil-calendar-alt"></i></span>
 					<div className={Styles.datePickerContainer}><DatePicker onChange={ (date) => onChangeDate('start', date)} selected={date.start}/></div>
 				</div>
 
 				<div className="w-full flex flex-col">
-					<span className="w-full text-[#fff] font-medium">Departure Date <i className="uil uil-calendar-alt"></i></span>
+					<span className="w-full font-medium">Departure Date <i className="uil uil-calendar-alt"></i></span>
 					<div className={Styles.datePickerContainer}><DatePicker onChange={ (date) => onChangeDate('end', date) } minDate={date.start} selected={date.end}/></div>
 				</div>
 			</div>
 			<div className="flex pt-[12px] gap-[1rem]">
 				<div className="flex flex-col w-full">
-					<p className="text-[#fff] font-medium">Adults</p>
+					<p className="font-medium">Adults</p>
 					<InputQuantityComponent/>
 				</div>
 				<div className="flex flex-col w-full">
-					<p className="text-[#fff] font-medium">Children</p>
+					<p className="font-medium">Children</p>
 					<InputQuantityComponent/>
 				</div>
 			</div>
 			<div className="flex flex-row items-center pt-[12px]">
-				<p className="text-[#fff] font-medium">With Insurance</p>
+				<p className="font-medium">With Insurance</p>
 				<div className="pl-[12px]">
 					<SwitchComponent size="SMALL"/>
 				</div>

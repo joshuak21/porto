@@ -9,6 +9,7 @@ import HeaderComponent, {
 import HeadingComponent from '@/components/heading'
 
 import FormPart from './_form'
+import BannerPart from './_banner'
 
 import Styles from './style.module.scss'
 
@@ -65,22 +66,13 @@ export default function BookingPage(): JSX.Element {
 		<div className={Styles.BookingPage}>
 			<HeaderComponent headerList={header}/>
 			<div className={Styles.contentContainer}>
-				<p className="text-[24px]">Booking Page</p>
-				{/* <p>Whereas disregard and contempt for human rights have resulted</p>
-				<div className={Styles.fontWeightList}>
-					<p className="font-thin">Montserrat Thin</p>
-					<p className="font-extralight">Montserrat ExtraLight</p>
-					<p className="font-light">Montserrat Light</p>
-					<p className="font-regular">Montserrat Regular</p>
-					<p className="font-medium">Montserrat Medium</p>
-					<p className="font-semibold">Montserrat SemiBold</p>
-					<p className="font-bold">Montserrat Bold</p>
-					<p className="font-extrabold">Montserrat ExtraBold</p>
-				</div> */}
-
 				<FormPart/>
+				<BannerPart/>
+				<div>
+					<p className="text-xl font-bold text-center">PPPP</p>
+				</div>
 			</div>
-			<FooterComponent contents={footerContents} company="Vercel"/>
+			<FooterComponent contents={footerContents} className="!bg-[#FFFFFF]" company="Vercel"/>
 		</div>
 	</>)
 }

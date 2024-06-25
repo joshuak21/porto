@@ -54,8 +54,8 @@ export default function LandingPage(): JSX.Element {
 			title: 'Shop',
 		}]
 	}, {
-		title: 'About Me',
-		href: '/#aboutme'
+		title: 'About Us',
+		href: '/#aboutus'
 	}, {
 		title: 'Our Stands',
 		href: '/#believe'
@@ -124,7 +124,7 @@ export default function LandingPage(): JSX.Element {
 					</div>
 				</section>
 
-				<section id="aboutme" className="max-w-[1600px] mx-auto py-4">
+				<section id="aboutus" className="max-w-[1600px] mx-auto py-4">
 					<div className="flex flex-col items-start px-4 py-8">
 						<h1 className="text-left text-[2em] font-bold mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
 						<p className="max-w-[480px]">Ut pretium ligula at commodo pharetra. Proin porta nibh sit amet nibh suscipit, in pretium elit mollis. Sed varius, erat eu fermentum ornare, mi mi pretium felis, sed consectetur arcu eros eget sem. Duis sit amet feugiat ante, sed convallis felis.</p>
@@ -140,10 +140,10 @@ export default function LandingPage(): JSX.Element {
 					</div>
 				</section>
 
-				<section id="service" className="bg-white">
+				<section id="service" className="bg-white py-4">
 					<div className="flex flex-col items-center py-8 max-w-[1600px] mx-auto">
 						<h1 className="text-center text-[2em] font-bold mb-4">What We Offers</h1>
-						<div className="flex flex-col sm:flex-row gap-8">
+						<div className="flex flex-col sm:flex-row gap-8 p-4">
 							<div className="flex flex-col w-full sm:w-1/2">
 								<p>Ut pretium ligula at commodo pharetra. Proin porta nibh sit amet nibh suscipit, in pretium elit mollis.</p>
 								<ul className="list-disc pl-7 my-4">

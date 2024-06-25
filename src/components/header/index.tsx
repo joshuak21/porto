@@ -1,6 +1,8 @@
 import {
 	memo,
 	useEffect,
+	useState,
+	useReducer,
 } from 'react'
 
 import NextLink from 'next/link'
@@ -31,6 +33,8 @@ function _HeaderComponent({
 	...props
 }: PropsInterface): JSX.Element {
 
+	const [state, setState] = useState<{showMobileHeader: boolean}>({showMobileHeader: false})
+
 	useEffect(() => {
 		document.addEventListener('click', (e) => {
 			const target = (e.target as HTMLElement).closest('.headerContainer')?.querySelectorAll('div.headerContainer')
@@ -44,7 +48,7 @@ function _HeaderComponent({
 		document.removeEventListener('click', () => {})
 	}, [])
 
-	const onToggle = (e: React.MouseEvent<HTMLDivElement>) => {
+	const onToggle = (e: React.MouseEvent<HTMLDivElement>, header: typeof props.headerList[0]) => {
 		//HIDE ALL HEADER DROPDOWN
 		const headers = document.getElementsByClassName('headerContainer')
 		Array.from(headers).forEach((h) => {
@@ -54,6 +58,15 @@ function _HeaderComponent({
 		//SHOW CLICKED DROPDOWN
 		const target = (e.target as HTMLElement).closest('.headerContainer')
 		target?.classList.add(Styles.show)
+
+		// Close header mobile if header have no children
+		if (!header.children?.length) {
+			setState({showMobileHeader: false})
+		}
+	}
+
+	function toggleHeaderMobile(): void {
+		setState({showMobileHeader: !state.showMobileHeader})
 	}
 
 	const onClickHeaderChildren = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -74,7 +87,7 @@ function _HeaderComponent({
 
 	const headerRenderer = (header: typeof props.headerList[0], index: number) => {
 		return (
-			<div key={index} className={`${Styles.headerContainer} headerContainer`} onClick={onToggle}>
+			<div key={index} className={`${Styles.headerContainer} headerContainer`} onClick={(e: React.MouseEvent<HTMLDivElement>): void => onToggle(e, header)}>
 				<NextLink href={header.href ?? ''} scroll={false}>
 					<p>{header.title}</p>
 				</NextLink>
@@ -101,6 +114,19 @@ function _HeaderComponent({
 				</div>
 				<div className={Styles.headerListContainer}>
 					{props.headerList.map(headerRenderer)}
+				</div>
+				<div className={Styles.headerCollapse}>
+					<button type="button" className="flex" onClick={toggleHeaderMobile}>
+						<i className="uil uil-bars leading-none text-xl"/>
+					</button>
+				</div>
+			</div>
+			<div className={`${Styles.headerMobileContainer} ${state.showMobileHeader ? Styles.showHeader : ''}`}>
+				<div className="absolute top-[-54px] left-0 w-full h-[100vh] z-[2]" onClick={toggleHeaderMobile}/>
+				<div className={Styles.headerMobileContentContainer}>
+					<div className="flex flex-col gap-2">
+						{props.headerList.map(headerRenderer)}
+					</div>
 				</div>
 			</div>
 		</header>

@@ -81,54 +81,20 @@ function _FormPart(): JSX.Element {
 
 	const tripTypeRenderer = (type: TripType): JSX.Element => {
 		return (
-			<div key={type.key} className={`trip-type-container ${formType === type.key ? 'active' : ''}`} onClick={(): void => onChangeType(type.key)}>
+			<button key={type.key} type="button" className={`rounded-md px-4 py-2 duration-500 ease hover:bg-blue-400 hover:text-[#FFFFFF] ${formType === type.key ? 'bg-blue-500 text-[#FFFFFF]' : ''}`} onClick={(): void => onChangeType(type.key)}>
 				<span><i className={`uil uil-${type.icon}`}/> {type.title}</span>
-			</div>
+			</button>
 		)
 	}
 
 	return (
-		<div className={Styles.FormPart}>
-			<div className="image-container-wrapper">
-				<div className="w-full h-full absolute">
-					<NextImage src={SkyBG} alt="object-cover w-full h-full"/>
+		<div className="flex flex-col py-8 bg-[#F9F9F9]">
+			<h1 className="text-3xl text-center mb-4">Book what you want, anytime, anywhere</h1>
+			<div className="p-4 w-full max-w-[900px] mx-auto my-0 shadow-[0_4px_20px_rgba(0,0,0,.2)] rounded-xl">
+				<div className="trip-types-container">
+					{tabs.map(tripTypeRenderer)}
 				</div>
-				<div className={Styles.contentContainer}>
-					{/* <div className={Styles.tripContainer}>
-						{tripOptions.map(tripRenderer)}
-					</div> */}
-					<div className="trip-types-container">
-						{tabs.map(tripTypeRenderer)}
-					</div>
-					<HotelTypePart/>
-					{/* <div className={`flex pt-[12px] ${Styles.dateContainer}`}>
-						<div className="w-full flex flex-col">
-							<span className="w-full text-[#fff] font-medium">Arrival Date <i className="uil uil-calendar-alt"></i></span>
-							<div className={Styles.datePickerContainer}><DatePicker onChange={ (date) => onChangeDate('arrival', date)} selected={selectedDate.arrival}/></div>
-						</div>
-
-						<div className="w-full flex flex-col">
-							<span className="w-full text-[#fff] font-medium">Departure Date <i className="uil uil-calendar-alt"></i></span>
-							<div className={Styles.datePickerContainer}><DatePicker onChange={ (date) => onChangeDate('departure', date) } minDate={selectedDate.arrival} selected={selectedDate.departure}/></div>
-						</div>
-					</div>
-					<div className={`flex pt-[12px] ${Styles.guestContainer}`}>
-						<div className="flex flex-col w-full">
-							<p className="text-[#fff] font-medium">Adults</p>
-							<InputQuantityComponent/>
-						</div>
-						<div className="flex flex-col w-full">
-							<p className="text-[#fff] font-medium">Children</p>
-							<InputQuantityComponent/>
-						</div>
-					</div>
-					<div className="flex flex-row items-center pt-[12px]">
-						<p className="text-[#fff] font-medium">With Insurance</p>
-						<div className="pl-[12px]">
-							<SwitchComponent size="SMALL"/>
-						</div>
-					</div> */}
-				</div>
+				<HotelTypePart/>
 			</div>
 		</div>
 	)
