@@ -87,6 +87,14 @@ span {
   color: #000000;
 }
 
+.icon-loader {
+	animation: loader-spin 2s infinite linear;
+}
+@keyframes loader-spin {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg) }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
