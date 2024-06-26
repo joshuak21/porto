@@ -47,7 +47,7 @@ export default function LoginPage(): JSX.Element {
 						</div>
 					</form>
 					<div className="flex justify-center items-center">
-						<span>Don't have an account? <a className="underline">Register here</a></span>
+						<span>Don&apos;t have an account? <a className="underline">Register here</a></span>
 					</div>
 				</div>
 			</div>
