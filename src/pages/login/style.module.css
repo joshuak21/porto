@@ -1,0 +1,31 @@
+.form-input {
+	position: relative;
+}
+.form-input label {
+	position: absolute;
+	top: 4px;
+	left: 16px;
+	transition: all .3s ease;
+}
+.form-input input {
+	width: 100%;
+	padding: 8px 16px;
+	padding-top: 24px;
+	padding-right: 28px;
+	border-radius: 4px;
+}
+.form-input input::placeholder {
+	opacity: 0;
+}
+.form-input input:focus {
+	outline: none;
+}
+.form-input input:focus+label,
+.form-input input:not(:placeholder-shown)+label {
+	font-size: 12px;
+}
+.form-input .btn-toggle {
+	position: absolute;
+	right: 8px;
+	bottom: 6px;
+}

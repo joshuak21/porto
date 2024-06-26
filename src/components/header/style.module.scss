@@ -39,7 +39,7 @@
 	background: rgba(255,255,255,1);
 	border-radius: .25em;
 	transform: translateY(-100%);
-	transition: all .5s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 
 .headerImage {
@@ -68,7 +68,7 @@
 }
 
 .show {
-	background-color: rgba(22, 159, 204, .5);
+	background: rgba(var(--header-background), .5);
 	div {
 		opacity: 1;
 		pointer-events: unset;
@@ -87,13 +87,13 @@
 
 .headerChildrenContainer {
 	position: absolute;
-	background: rgb(173, 216, 230);
-	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
+	background: rgba(var(--header-background), 1);
+	box-shadow: 0px 8px 8px rgba(0,0,0,.15);
 	min-width: 140px;
 	top: 100%;
 	right: 0;
 	z-index: 999;
-	border: 1px solid rgba(115, 172, 191);
+	border: 1px solid rgba(0, 0, 0, .15);
 	border-radius: 4px;
 	opacity: 0;
 	pointer-events: none;
@@ -106,7 +106,7 @@
 		width: 100%;
 	}
 	a:hover {
-		background: rgba(115, 172, 191,.8);
+		background: rgba(0,0,0,.15);
 	}
 }
 
@@ -130,6 +130,6 @@
 	}
 	.headerMobileContainer.showHeader .headerMobileContentContainer {
 		transform: translateY(54px);
-		box-shadow: 0 0 4px 4px rgba(0,0,0,.5);
+		box-shadow: 0 0 4px 4px rgba(0,0,0,.15);
 	}
 }

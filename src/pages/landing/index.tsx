@@ -186,15 +186,20 @@ export default function LandingPage(): JSX.Element {
 				<section id="testimonies" className="py-4 pt-[5em]">
 					<div className="flex flex-col items-center py-8">
 						<h1 className="text-[2em] font-bold mb-4">Testimonies</h1>
-						<Swiper slidesPerView={2.25} className="w-full !px-4" spaceBetween={12} loop>
+						<Swiper slidesPerView={1.25} className="w-full !px-4" spaceBetween={12} loop centeredSlides
+							breakpoints={{
+								640: { slidesPerView: 1.5 },
+								720: { slidesPerView: 2.25 }
+							}}
+						>
 							{testimonies.map((data: typeof testimonies[0], index: number) => (
 								<SwiperSlide key={index}>
 									<div className="bg-white p-4 rounded-md">
-										<div className="flex flex-row items-start">
+										<div className="flex flex-row items-start select-none">
 											<span className="flex"><i className="uil uil-user-square leading-none text-[3em]"/></span>
 											<p className="ml-2 font-medium text-lg">{data.name}</p>
 										</div>
-										<p className="pt-2 whitespace-break-spaces line-clamp-4">{data.message}</p>
+										<p className="pt-2 whitespace-break-spaces line-clamp-4 select-none">{data.message}</p>
 										<div className="mt-2 flex w-full justify-end">
 											<button type="button" onClick={(): void => readTestimony(data)} className="underline text-sm">Read more</button>
 										</div>
