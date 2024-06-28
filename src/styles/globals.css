@@ -47,7 +47,6 @@ input {
 span {
   vertical-align: initial;
   border: 0;
-  font: inherit !important;
 }
 
 .image-container-wrapper {

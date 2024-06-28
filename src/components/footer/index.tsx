@@ -1,8 +1,7 @@
-import {
-	memo,
-} from 'react'
-
+import { memo } from 'react'
 import NextImage from 'next/image'
+
+import moment from 'moment'
 
 import Styles from './style.module.scss'
 
@@ -23,9 +22,6 @@ function _FooterComponent({
 	alt = 'Footer Logo',
 	...props
 }: PropsInterface): JSX.Element {
-
-	const year = new Date().getFullYear()
-
 	const onSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 		alert('SUBSCRIBED')
@@ -70,7 +66,7 @@ function _FooterComponent({
 					</div>
 				</div>
 				<div className={Styles.copyrightContainer}>
-					<p>© {year} {props.company}</p>
+					<p>© {moment().year()} {props.company}</p>
 				</div>
 			</footer>
 		</div>
