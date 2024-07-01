@@ -53,7 +53,7 @@ export default function LoginPage(): JSX.Element {
 							</div>
 						</div>
 						<div className="flex justify-end">
-							<p className="tex-right text-[12px] cursor-pointer">Forgot password?</p>
+							<NextLink href="/forgot-password" className="tex-right text-[12px]">Forgot password?</NextLink>
 						</div>
 						<div className="mt-4">
 							<button type="submit" disabled={d.isSubmitting} className="w-full bg-sky-400 text-white rounded-[4px] py-1 hover:opacity-80 flex flex-row items-center justify-center disabled:opacity-50">
@@ -65,7 +65,7 @@ export default function LoginPage(): JSX.Element {
 						<span className="text-[14px]">Don&apos;t have an account? <NextLink href="/register" className="underline font-[500]">Register here</NextLink></span>
 					</div>
 				</div>
-				<div className="absolute bottom-[1em] left-50">
+				<div className="absolute bottom-[1em] left-1/2">
 					<p className="text-[12px]">© {moment().year()}</p>
 				</div>
 			</div>

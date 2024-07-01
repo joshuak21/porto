@@ -93,7 +93,7 @@ export default function RegisterPage(): JSX.Element {
 						<span className="text-[14px]">Already have an account? <NextLink href="/login" className="underline font-[500]">Login here</NextLink></span>
 					</div>
 				</div>
-				<div className="absolute bottom-[1em] left-50">
+				<div className="absolute bottom-[1em] left-1/2">
 					<p className="text-[12px]">© {moment().year()}</p>
 				</div>
 			</div>
