@@ -38,4 +38,5 @@
 	position: absolute;
 	right: 8px;
 	bottom: 6px;
+	z-index: 2;
 }

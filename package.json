@@ -1,6 +1,6 @@
 {
-  "name": "port",
-  "version": "0.1.011",
+  "name": "portofolio",
+  "version": "0.1.012",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --port 3400",
