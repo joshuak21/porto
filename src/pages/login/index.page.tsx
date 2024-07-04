@@ -65,7 +65,7 @@ export default function LoginPage(): JSX.Element {
 						<span className="text-[14px]">Don&apos;t have an account? <NextLink href="/register" className="underline font-[500]">Register here</NextLink></span>
 					</div>
 				</div>
-				<div className="absolute bottom-[1em] left-1/2">
+				<div className="absolute bottom-4 left-1/2">
 					<p className="text-[12px]">© {moment().year()}</p>
 				</div>
 			</div>

@@ -3,6 +3,7 @@ import { useRouter, NextRouter } from 'next/router'
 import NextLink from 'next/link'
 import HeadingComponent from '@/components/heading'
 import { sleep } from '@/@utils/common'
+import moment from 'moment'
 
 import Styles from './style.module.css'
 
@@ -29,6 +30,7 @@ export default function ForgotPasswordPage(): JSX.Element {
 	return (<>
 		<HeadingComponent title="Forgot Password"/>
 		<div className="w-[100vw] h-[100vh] bg-sky-200 relative flex items-center justify-center">
+			<div className="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,.25)]"/>
 			<div className="bg-white p-4 rounded-md w-full max-w-[480px] relative">
 				<h4>Forgot Password</h4>
 				<p>Please enter the email you use to sign in.</p>
@@ -46,6 +48,9 @@ export default function ForgotPasswordPage(): JSX.Element {
 				<div className="flex items-center justify-center">
 					<NextLink href="/login" className="underline">Back to login</NextLink>
 				</div>
+			</div>
+			<div className="absolute bottom-4 left-1/2">
+				<p className="text-[12px]">© {moment().year()}</p>
 			</div>
 		</div>
 	</>)
