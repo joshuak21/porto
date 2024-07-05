@@ -52,6 +52,7 @@ export default function LandingPage(): JSX.Element {
 			href: 'booking'
 		}, {
 			title: 'Shop',
+			href: 'shop'
 		}]
 	}, {
 		title: 'About Us',

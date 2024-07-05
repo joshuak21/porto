@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NextImage, { StaticImageData } from 'next/image'
+import CountdownTimer from '@/components/countdown'
 
 import SwiperCore, { Pagination, FreeMode, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -15,7 +16,8 @@ import Styles from './style.module.css'
 
 import BannerAC6 from '../../../../public/img/shop/banner/AC_6.jpg'
 import BannerLandscape from '../../../../public/img/landing/unsplash-jefferson-sees.jpg'
-import CountdownTimer from '@/components/countdown'
+import Burger from '../../../../public/img/shop/product/burger.jpg'
+import { formatPrice } from '@/@utils/common'
 
 interface BannerInterface {
 	image: StaticImageData,
@@ -75,6 +77,18 @@ export default function LandingComponent(): JSX.Element {
 				</div>
 			</div>
 		)}
+
+		<div className="flex flex-row justify-between items-center mx-8 mb-12">
+			<div className={Styles['card-product-container']}>
+				<div className={Styles['card-product']}>
+					<NextImage src={Burger} alt="Product Thumbnail" className="rounded-sm object-contain"/>
+					<div className="mt-2">
+						<p className="text-[18px] font-medium">Deluxe Burger</p>
+						<p>{formatPrice(34999)}</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</>)
 }
 
