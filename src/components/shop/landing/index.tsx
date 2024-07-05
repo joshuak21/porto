@@ -45,12 +45,13 @@ export default function LandingComponent(): JSX.Element {
 			image: BannerAC6,
 			title: 'Armoured Core VI - Fires of Rubicon',
 			price: 599000,
-		}]
-		// forYou: ForYou[] = [{
-		// 	image: BannerLandscape,
-		// 	title: 'Game #1',
-		// 	price: 
-		// }]
+		}],
+		products = [
+			{ price: 35000, discountedPrice: 28000 },
+			{ price: 27000, discountedPrice: 23000 },
+			{ price: 45000, discountedPrice: 41000 },
+			{ price: 25000, discountedPrice: 25000 }
+		]
 
 	const timerIsDone = (): void => {
 		console.log('TIMER IS DONE')
@@ -78,16 +79,29 @@ export default function LandingComponent(): JSX.Element {
 			</div>
 		)}
 
-		<div className="flex flex-row justify-between items-center mx-8 mb-12">
-			<div className={Styles['card-product-container']}>
-				<div className={Styles['card-product']}>
-					<NextImage src={Burger} alt="Product Thumbnail" className="rounded-sm object-contain"/>
-					<div className="mt-2">
-						<p className="text-[18px] font-medium">Deluxe Burger</p>
-						<p>{formatPrice(34999)}</p>
+		<div className="grid grid-cols-4 gap-4 mx-8 mb-12">
+			{products.map((data, index: number) => (
+				<div key={index} className={Styles['card-product-container']}>
+					<div className={Styles['card-product']}>
+						<NextImage src={Burger} alt="Product Thumbnail" className="rounded-sm object-contain"/>
+						<div className="flex flex-col mt-2 h-full justify-between">
+							<div className="flex flex-col">
+								<p className="text-[18px] font-medium">Deluxe Burger</p>
+								{data.discountedPrice !== data.price ? (<>
+									<p className="line-through text-[12px]">{formatPrice(data.price)}</p>
+									<p className="font-medium text-[#FF0000]">{formatPrice(data.discountedPrice)}</p>
+								</>) : (
+									<p>{formatPrice(data.price)}</p>
+								)}
+							</div>
+
+							<div className="mt-2 flex justify-end">
+								<button type="button" className="bg-[#000000] py-1 px-4 rounded-md text-white duration-300 ease hover:opacity-80">Buy Now</button>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			))}
 		</div>
 	</>)
 }
