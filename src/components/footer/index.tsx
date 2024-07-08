@@ -49,7 +49,7 @@ function _FooterComponent({
 	}
 
 	return (
-		<div className={`${Styles.footerWrapper} ${props.className || ''}`} style={props.style}>
+		<div id="footer" className={`${Styles.footerWrapper} ${props.className || ''}`} style={props.style}>
 			<footer className={Styles.footerContainer}>
 				<div className={Styles.footerInnerContainer}>
 					<div className={Styles.footerImageContainer}>

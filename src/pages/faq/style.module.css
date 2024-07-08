@@ -1,0 +1,6 @@
+.faq-page {
+	--header-background: 255,255,255;
+	font-family: Poppins, sans-serif;
+	background: #F7F9FF;
+	padding-bottom: 6em;
+}
