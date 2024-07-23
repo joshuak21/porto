@@ -66,7 +66,7 @@ export default function LandingComponent(): JSX.Element {
 	}
 	
 	return (
-		<div className={Styles['LandingPage']}>
+		<div className="py-4">
 			{/* <div className={Styles.BannerSection}>
 				<h2 className={Styles.title}>Great Deals</h2>
 				<Swiper spaceBetween={50} modules={[Autoplay]} pagination={{clickable: false}} autoplay loop>
@@ -78,16 +78,12 @@ export default function LandingComponent(): JSX.Element {
 				</Swiper>
 			</div> */}
 
-			<div className={Styles['shop-header']}>
-				<p>HEADER WITH SEARCHBAR</p>
-			</div>
-
 			<div className={Styles['content-container']}>
 				<div>
-					<Swiper spaceBetween={50} modules={[Autoplay]} autoplay={{delay: 3000, disableOnInteraction: false}} loop className="rounded-md">
+					<Swiper spaceBetween={50} modules={[Autoplay]} autoplay={{delay: 3000, disableOnInteraction: false}} loop>
 						{promoBanner.map((p, idx) => (
 							<SwiperSlide key={idx}>
-								<NextImage src={p} alt="" className="w-full"/>
+								<NextImage src={p} alt="" className="w-full rounded-xl"/>
 							</SwiperSlide>
 						))}
 					</Swiper>

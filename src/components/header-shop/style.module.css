@@ -1,4 +1,54 @@
 .header-shop-container {
-	padding: .5em 1em;
+	padding: .5em 1.5em;
 	box-shadow: 0 2px 5px rgba(0,0,0,.15);
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background: #FFFFFF;
+}
+
+.header-search-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 16em;
+}
+
+.header-search-container input {
+	width: 60vw;
+	border: 1px solid #9C9DA2;
+	border-radius: 1.25em;
+	padding: 8px 20px;
+	padding-left: 36px;
+	outline: none;
+	font-size: .825em;
+}
+
+.header-search-container input:focus {
+	outline: none;
+}
+
+.btn-login {
+	background: #00BA61;
+	border: 1px solid #00BA61;
+	border-radius: .75em;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 75px;
+	font-size: .875em;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+
+.btn-regis {
+	background: #FFFFFF;
+	border: 1px solid #00BA61;
+	border-radius: .75em;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 75px;
+	font-size: .875em;
+	color: #00BA61;
+	font-weight: 600;
 }
