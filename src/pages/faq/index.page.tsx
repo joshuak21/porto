@@ -66,22 +66,22 @@ export default function FaqPage(): JSX.Element {
 			<section className="flex flex-col justify-center items-center">
 				<h3>Frequently Asked Question</h3>
 				<div className="mt-4 flex flex-col w-full p-2 gap-4">
-					<CollapsibleComponent title="Where do I log in?" controlled onClick={(): void => toggleCollapsible(1)} isActive={d.activeIndex == 1}>
+					<CollapsibleComponent title="Where do I log in?" iconPosition="right" controlled onClick={(): void => toggleCollapsible(1)} isActive={d.activeIndex == 1}>
 						<div className="flex p-4">
 							<p>Frequently asked question children #1</p>
 						</div>
 					</CollapsibleComponent>
-					<CollapsibleComponent title="How do I create a new account?" controlled onClick={(): void => toggleCollapsible(2)} isActive={d.activeIndex == 2}>
+					<CollapsibleComponent title="How do I create a new account?" iconPosition="right" controlled onClick={(): void => toggleCollapsible(2)} isActive={d.activeIndex == 2}>
 						<div className="flex p-4">
 							<p>Frequently asked question children #2</p>
 						</div>
 					</CollapsibleComponent>
-					<CollapsibleComponent title="When can I contact?" controlled onClick={(): void => toggleCollapsible(3)} isActive={d.activeIndex == 3}>
+					<CollapsibleComponent title="When can I contact?" iconPosition="right" controlled onClick={(): void => toggleCollapsible(3)} isActive={d.activeIndex == 3}>
 						<div className="flex p-4">
 							<p>Frequently asked question children #3</p>
 						</div>
 					</CollapsibleComponent>
-					<CollapsibleComponent title="What are the benefits?" controlled onClick={(): void => toggleCollapsible(4)} isActive={d.activeIndex == 4}>
+					<CollapsibleComponent title="What are the benefits?" iconPosition="right" controlled onClick={(): void => toggleCollapsible(4)} isActive={d.activeIndex == 4}>
 						<div className="flex p-4">
 							<p>Frequently asked question children #4</p>
 						</div>

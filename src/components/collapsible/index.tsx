@@ -4,6 +4,7 @@ import Styles from './style.module.css'
 
 export interface PropsInterface {
 	title: string
+	iconPosition?: 'left' | 'right'
 	icon?: { active: string, inactive: string }
 	controlled?: boolean
 	isActive?: boolean
@@ -19,7 +20,10 @@ class ElementData {
 	public active: boolean = false
 }
 
-export default function CollapsibleComponent(props: PropsInterface): JSX.Element {
+export default function CollapsibleComponent({
+	iconPosition = 'right',
+	...props
+}: PropsInterface): JSX.Element {
 	const [d] = useState(new ElementData())
 	const [, forceUpdate] = useReducer((x: number) => x + 1, 0)
 
@@ -43,7 +47,7 @@ export default function CollapsibleComponent(props: PropsInterface): JSX.Element
 
 	return (
 		<div className={`${props.className}`}>
-			<div onClick={toggle} className="flex flex-row bg-[#FFFFFF] p-2 cursor-pointer items-center">
+			<div onClick={toggle} className={`flex ${iconPosition === 'left' ? 'flex-row' : 'flex-row-reverse justify-between'} bg-[#FFFFFF] p-2 cursor-pointer items-center`}>
 				<i className={`${props.icon ? (d.active && `uil-${props.icon.active}` || `uil-${props.icon.inactive}`) : (d.active && 'uil-angle-up' || 'uil-angle-down')} text-xl leading-none`}/>
 				<h4 className={`${props.titleClassName} text-base`}>{props.title}</h4>
 			</div>
