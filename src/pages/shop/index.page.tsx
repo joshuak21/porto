@@ -7,6 +7,7 @@ import HeaderComponent, {
 } from "@/components/header";
 import HeadingComponent from "@/components/heading";
 import LandingComponent from "@/components/shop/landing";
+import HeaderShopComponent from "@/components/header-shop";
 
 import Styles from "./style.module.css";
 
@@ -59,7 +60,8 @@ export default function ShopLandingPage(): JSX.Element {
   return (
     <>
       <HeadingComponent title="Commerce Landing Page" />
-      <HeaderComponent headerList={header} />
+      {/* <HeaderComponent headerList={header} /> */}
+      <HeaderShopComponent/>
       <main>
         <LandingComponent />
       </main>
