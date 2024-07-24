@@ -42,7 +42,6 @@ export default function CollapsibleComponent({
 			d.active = !d.active
 			forceUpdate()
 		}
-
 	}
 
 	return (

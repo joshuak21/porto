@@ -55,7 +55,6 @@ export default function FaqPage(): JSX.Element {
 		if (d.activeIndex === index) d.activeIndex = undefined
 		else d.activeIndex = index
 		forceUpdate()
-		console.log('HERE')
 	}
 
 	return (<>

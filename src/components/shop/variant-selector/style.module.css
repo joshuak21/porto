@@ -1,0 +1,17 @@
+.variant-container {
+	width: 150px;
+	flex-wrap: wrap;
+	padding: .5em 1em;
+	cursor: pointer;
+	border: 1px solid #000000;
+	transition: all .2s ease-in-out;
+}
+
+.variant-container:hover {
+	border-color: #00BA61;
+	background: rgba(0,0,0,.2);
+}
+
+.selected {
+	border-color: #00BA61;
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import NextLink from 'next/link'
 import NextImage, { StaticImageData } from 'next/image'
 import CountdownTimer from '@/components/countdown'
 
@@ -102,26 +103,27 @@ export default function LandingComponent(): JSX.Element {
 					{products.map((data, index: number) => (
 						<div key={index} className={Styles['card-product-container']}>
 							<div className={Styles['card-product']}>
-								<NextImage src={Burger} alt="Product Thumbnail" className="rounded-sm object-contain"/>
-								<div className="flex flex-col mt-2 h-full justify-between">
+								<NextImage src={Burger} alt="Product Thumbnail" className="object-contain"/>
+								<div className="flex flex-col p-2 h-full justify-between">
 									<div className="flex flex-col">
-										<p className="text-[18px] font-medium">Deluxe Burger</p>
-										{data.discountedPrice !== data.price ? (<>
-											<p className="line-through text-[12px]">{formatPrice(data.price)}</p>
-											<p className="font-medium text-[#FF0000]">{formatPrice(data.discountedPrice)}</p>
-										</>) : (
+										<p className="text-sm">Deluxe Burger</p>
+										{data.discountedPrice !== data.price ? (
+											<div className="flex flex-row gap-1 items-center">
+												<p className="text-sm font-medium">{formatPrice(data.discountedPrice)}</p>
+												<p className="line-through text-[12px] opacity-[.5]">{formatPrice(data.price)}</p>
+											</div>
+										) : (
 											<p>{formatPrice(data.price)}</p>
 										)}
 									</div>
-
-									<div className="mt-2 flex justify-end">
-										<button type="button" className="bg-[#000000] py-1 px-4 rounded-md text-white duration-300 ease hover:opacity-80">Buy Now</button>
-									</div>
 								</div>
 							</div>
+							<NextLink href="/shop/detail" className="absolute top-0 left-0 w-full h-full z-[1]"/>
 						</div>
 					))}
 				</div>
+
+				<div className="h-[2px] bg-[#9C9CA0] mx-8"/>
 			</div>
 		</div>
 	)
